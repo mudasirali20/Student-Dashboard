@@ -1,0 +1,173 @@
+.container {
+    display: flex;
+}
+.welcome-text {
+    color: rgb(0, 2, 146); 
+}
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #01097c;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 5px 0;
+    background: #0056b3;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background: #004494;
+}
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    width: 100%;
+}
+
+.course {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+.dark-mode {
+    background-color: #222;
+}
+
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode p, 
+.dark-mode a {
+    color: inherit; /* Text ka color same rahega */
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #007bff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
+    display: auto;
+    margin-bottom: 15px;
+    border: 3px solid white;
+}
+#reminder-text {
+    padding: 8px;
+    width: 220px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#reminder-list {
+    list-style: none;
+    padding: 0;
+}
+
+#reminder-list li {
+    margin: 5px 0;
+    padding: 8px;
+    background: #e3f2fd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#reminder-list li span {
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#set-reminder {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#set-reminder:hover {
+    background: #0056b3;
+}
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+.dark-mode .theme-toggle {
+    background: black;
+    color: white;
+}
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+    }
+    .list-group-item {
+        font-size: 14px;
+        text-align: center;
+    }
+    .btn {
+        width: 100%;
+    }
+}
+

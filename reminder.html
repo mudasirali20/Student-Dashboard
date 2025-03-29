@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminders</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .profile-pic {
+            width: 120px;
+            height: 120px;
+            border-radius: 100%;
+            display: block;
+            margin-bottom: 15px;
+            border: 3px solid white;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+            .profile-pic {
+                width: 80px;
+                height: 80px;
+            }
+            .list-group-item {
+                font-size: 0.9rem;
+                text-align: center;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-primary text-center">Study Reminders</h1>
+        <ul class="list-group" id="reminder-list">
+            <li class="list-group-item">Complete Web Development Assignment</li>
+            <li class="list-group-item">Revise Machine Learning Notes</li>
+            <li class="list-group-item">Prepare for Data Science Quiz</li>
+        </ul>
+        <div class="mt-3">
+            <input type="text" id="reminder-text" class="form-control" placeholder="Enter reminder">
+            <input type="datetime-local" id="reminder-time" class="form-control mt-2">
+            <button class="btn btn-success mt-2" onclick="setReminder()">Set Reminder</button>
+        </div>
+        <a href="index.html" class="btn btn-primary mt-3">Back to Dashboard</a>
+    </div>
+    
+    <script>
+        function setReminder() {
+            const text = document.getElementById('reminder-text').value.trim();
+            const time = document.getElementById('reminder-time').value;
+            if (text && time) {
+                const reminderList = document.getElementById('reminder-list');
+                const newReminder = document.createElement('li');
+                newReminder.className = 'list-group-item';
+                newReminder.textContent = `${text} - Reminder set for ${new Date(time).toLocaleString()}`;
+                reminderList.appendChild(newReminder);
+                
+                setTimeout(() => {
+                    alert(`Reminder: ${text}`);
+                }, new Date(time) - new Date());
+            }
+        }
+    </script>
+</body>
+</html>
